@@ -1,0 +1,33 @@
+{
+   "compilerOptions": {
+      "lib": [
+         "es5",
+         "es6"
+      ],
+      "target": "ES2017",
+      "typeRoots": [
+        "./node_modules/@types",
+        "./src/@types"
+      ],
+      "removeComments": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "rootDir": "./src",
+      "outDir": "./build",
+      "baseUrl": ".",
+      "paths": {
+        "@controllers/*": ["./src/app/controller/*"],
+        "@models/*": ["./src/app/models/*"],
+      },
+      "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+   },
+   "include": [
+    "src/**/*"
+  ]
+}

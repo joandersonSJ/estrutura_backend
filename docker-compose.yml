@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.5'
+
+services:
+  db:
+    container_name: banco_postgres
+    image: postgres:alpine
+    ports:
+    - ${PORT_BANCO}:5432
+    restart: always
+    environment:
+      POSTGRES_USER: ${USER_BANCO}
+      POSTGRES_PASSWORD: ${PASSWORD_BANCO}
+      POSTGRES_DB: ${DATABASE_NAME}
+    env_file:
+      .env
